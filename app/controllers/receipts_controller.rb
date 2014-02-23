@@ -15,7 +15,7 @@ class ReceiptsController < ApplicationController
   # GET /receipts/new
   def new
     @receipt = Receipt.new
-  end
+  end 
 
   # GET /receipts/1/edit
   def edit
