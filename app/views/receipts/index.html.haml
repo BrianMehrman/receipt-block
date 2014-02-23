@@ -1,0 +1,31 @@
+%h1 Listing receipts
+
+%table
+  %tr
+    %th Name
+    %th Context
+    %th Processed text
+    %th Tip
+    %th Tax
+    %th Sub total
+    %th Total
+    %th
+    %th
+    %th
+
+  - @receipts.each do |receipt|
+    %tr
+      %td= receipt.name
+      %td= receipt.context
+      %td= receipt.processed_text
+      %td= receipt.tip
+      %td= receipt.tax
+      %td= receipt.sub_total
+      %td= receipt.total
+      %td= link_to 'Show', receipt
+      %td= link_to 'Edit', edit_receipt_path(receipt)
+      %td= link_to 'Destroy', receipt, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Receipt', new_receipt_path

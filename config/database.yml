@@ -1,0 +1,22 @@
+defaults: &defaults
+  adapter: mysql2
+  encoding: utf8
+  username: root
+  pool: 5
+  timeout: 5000
+  # CentOS Jenkins setting
+  # socket: /var/lib/mysql/mysql.sock
+  # OS X setting
+  socket: /tmp/mysql.sock
+
+development:
+  <<: *defaults
+  database: ocr_development
+
+test:
+  <<: *defaults
+  database: ocr_test
+
+production:
+  <<: *defaults
+  database: ocr_development

@@ -1,0 +1,30 @@
+%p#notice= notice
+
+%p
+  %b Receipt:
+  = @split.receipt_id
+%p
+  %b Name:
+  = @split.name
+%p
+  %b Payment type:
+  = @split.payment_type
+%p
+  %b Split type:
+  = @split.split_type
+%p
+  %b Tax:
+  = @split.tax
+%p
+  %b Tip:
+  = @split.tip
+%p
+  %b Sub total:
+  = @split.sub_total
+%p
+  %b Total:
+  = @split.total
+
+= link_to 'Edit', edit_split_path(@split)
+\|
+= link_to 'Back', splits_path

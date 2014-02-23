@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @receipt.name
+%p
+  %b Context:
+  = @receipt.context
+%p
+  %b Processed text:
+  = @receipt.processed_text
+%p
+  %b Tip:
+  = @receipt.tip
+%p
+  %b Tax:
+  = @receipt.tax
+%p
+  %b Sub total:
+  = @receipt.sub_total
+%p
+  %b Total:
+  = @receipt.total
+
+= link_to 'Edit', edit_receipt_path(@receipt)
+\|
+= link_to 'Back', receipts_path

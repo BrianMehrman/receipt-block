@@ -1,0 +1,34 @@
+= form_for @split do |f|
+  - if @split.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@split.errors.count, "error")} prohibited this split from being saved:"
+      %ul
+        - @split.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :receipt_id
+    = f.number_field :receipt_id
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :payment_type
+    = f.text_field :payment_type
+  .field
+    = f.label :split_type
+    = f.text_field :split_type
+  .field
+    = f.label :tax
+    = f.text_field :tax
+  .field
+    = f.label :tip
+    = f.text_field :tip
+  .field
+    = f.label :sub_total
+    = f.text_field :sub_total
+  .field
+    = f.label :total
+    = f.text_field :total
+  .actions
+    = f.submit 'Save'

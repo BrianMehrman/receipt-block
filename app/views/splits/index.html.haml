@@ -1,0 +1,33 @@
+%h1 Listing splits
+
+%table
+  %tr
+    %th Receipt
+    %th Name
+    %th Payment type
+    %th Split type
+    %th Tax
+    %th Tip
+    %th Sub total
+    %th Total
+    %th
+    %th
+    %th
+
+  - @splits.each do |split|
+    %tr
+      %td= split.receipt_id
+      %td= split.name
+      %td= split.payment_type
+      %td= split.split_type
+      %td= split.tax
+      %td= split.tip
+      %td= split.sub_total
+      %td= split.total
+      %td= link_to 'Show', split
+      %td= link_to 'Edit', edit_split_path(split)
+      %td= link_to 'Destroy', split, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Split', new_split_path
