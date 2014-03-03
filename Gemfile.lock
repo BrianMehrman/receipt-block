@@ -37,7 +37,7 @@ GEM
     arrayfields (4.9.2)
     atomic (1.1.14)
     awesome_print (1.2.0)
-    bootstrap-sass (3.0.3.0)
+    bootstrap-sass (3.1.1.0)
       sass (~> 3.2)
     browser (0.4.0)
     builder (3.1.4)
@@ -351,7 +351,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootstrap-sass (~> 3.0.3.0)
+  bootstrap-sass (~> 3.1.1)
   browser
   carrierwave
   coffee-rails (~> 4.0.0)
